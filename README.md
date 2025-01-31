@@ -10,7 +10,7 @@ Whether you're a student budgeting for the semester, a working professional mana
 🧾 **Receipt Scanning (OCR)** – Digitize and categorize your expenses  
 🔐 **Secure Bank Integration** – Powered by **Plaid API** for secure financial data retrieval  
 
-
+With WiseFin, financial control is just a tap away!
 ---
 
 ## 📌 Features  
@@ -21,7 +21,6 @@ Whether you're a student budgeting for the semester, a working professional mana
 ✅ **AI-Powered Insights** – Get smart recommendations on spending habits  
 ✅ **Bank Integration (Plaid API)** – Securely connect financial accounts  
 
-With WiseFin, financial control is just a tap away!
 ---
 
 ## 🛠 Tech Stack  
