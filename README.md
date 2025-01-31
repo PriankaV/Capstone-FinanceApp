@@ -1,5 +1,15 @@
-# 💰 WiseFin  
-WiseFin is a **React Native + Flask** financial management app that helps users take control of their spending, set financial goals, and gain AI-driven insights into their transactions.  
+# **💰 WiseFin ** 
+**WiseFin** is an AI-powered financial management app designed to help users take full control of their finances. Built with **React Native** (frontend) and **Flask** (backend), WiseFin provides real-time insights into your spending, helps you set and track financial goals, and seamlessly integrates with your bank accounts to automate expense tracking.  
+
+Whether you're a student budgeting for the semester, a working professional managing monthly expenses, or a family planning for long-term savings, **WiseFin simplifies financial management** with an intuitive, user-friendly interface.  
+
+### 🌟 **Why WiseFin?**
+💡 **Automated Expense Tracking** – Sync transactions from multiple bank accounts  
+📊 **AI-Driven Insights** – Get personalized spending recommendations  
+🏆 **Goal-Oriented Budgeting** – Set savings goals and track progress  
+📸 **Receipt Scanning (OCR)** – Digitize and categorize your expenses  
+🔐 **Secure Bank Integration** – Powered by **Plaid API** for secure financial data retrieval  
+
 
 ---
 
