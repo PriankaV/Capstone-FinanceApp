@@ -27,3 +27,16 @@ WiseFin is a **React Native + Flask** financial management app that helps users 
 ```bash
 git clone https://github.com/PriankaV/WiseFin.git
 cd WiseFin
+
+### 2️⃣ Install Dependencies
+```bash
+npm install
+npx expo start
+pip install -r requirements.txt
+python app.py
+
+
+### 📝 Future Enhancements
+🔹 Dark Mode Support
+🔹 Voice Assistant Integration
+🔹 Investment Tracking
