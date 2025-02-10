@@ -50,54 +50,5 @@ export default function LoginScreen() {
   );
 }
 
-// Styling
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#fff",
-    paddingHorizontal: 20,
-  },
-  title: {
-    fontSize: 28,
-    fontWeight: "bold",
-    marginBottom: 20,
-  },
-  input: {
-    width: "100%",
-    height: 50,
-    borderWidth: 1,
-    borderColor: "#ccc",
-    borderRadius: 8,
-    paddingHorizontal: 10,
-    fontSize: 16,
-    marginBottom: 15,
-  },
-  button: {
-    backgroundColor: "#007bff",
-    width: "100%",
-    paddingVertical: 12,
-    borderRadius: 8,
-    alignItems: "center",
-    marginTop: 10,
-  },
-  buttonText: {
-    color: "#fff",
-    fontSize: 18,
-    fontWeight: "bold",
-  },
-  forgotPassword: {
-    color: "#007bff",
-    marginTop: 15,
-    fontSize: 16,
-  },
-  registerText: {
-    marginTop: 20,
-    fontSize: 16,
-  },
-  registerLink: {
-    color: "#007bff",
-    fontWeight: "bold",
-  },
-});
+/*Style Sheet Link*/
+import styles from "./styles";

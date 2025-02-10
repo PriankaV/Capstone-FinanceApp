@@ -91,49 +91,7 @@ const handleSignUp = async () => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20,
-    backgroundColor: '#fff',
-  },
-  header: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 20,
-  },
-  input: {
-    width: '100%',
-    padding: 10,
-    marginBottom: 10,
-    borderWidth: 1,
-    borderColor: '#ccc',
-    borderRadius: 5,
-  },
-  button: {
-    backgroundColor: '#007bff',
-    padding: 10,
-    borderRadius: 5,
-    width: '100%',
-    alignItems: 'center',
-  },
-  buttonText: {
-    color: '#fff',
-    fontSize: 16,
-  },
-  orText: {
-    marginVertical: 10,
-    fontSize: 16,
-  },
-  loginText: {
-    fontSize: 16,
-  },
-  loginLink: {
-    color: '#007bff',
-    fontWeight: 'bold',
-  },
-});
-
 export default SignUpScreen;
+
+/*Style Sheet Link*/
+import styles from "./styles";
