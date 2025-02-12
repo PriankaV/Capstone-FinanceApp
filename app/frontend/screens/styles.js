@@ -17,7 +17,7 @@ export default StyleSheet.create({
   input: {
     width: "100%",
     height: 50,
-    backgroundColor: "#E8F0F2",
+    backgroundColor: "#cadbd6",
     borderRadius: 10,
     paddingHorizontal: 15,
     marginBottom: 15,
@@ -27,7 +27,7 @@ export default StyleSheet.create({
   button: {
     width: "100%",
     height: 50,
-    backgroundColor: "#5F8575",
+    backgroundColor: "#319678",
     borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
@@ -48,7 +48,7 @@ export default StyleSheet.create({
     fontSize: 14,
   },
   registerLink: {
-    color: "#5F8575",
+    color: "#319678",
     fontWeight: "bold",
   },
 });

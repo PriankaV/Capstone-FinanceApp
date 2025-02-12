@@ -1,22 +1,49 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text } from 'react-native';
+import { View, ActivityIndicator } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import LoginScreen from './LoginScreen';
+import SignUpScreen from './SignUpScreen';
+import HomeScreen from './HomeScreen'; // Add a Home screen after login
+
+const Stack = createStackNavigator();
 
 export default function App() {
-  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [userToken, setUserToken] = useState(null);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:5000/api/users')
-      .then(response => response.json())
-      .then(data => setUsers(data))
-      .catch(error => console.error('Error:', error));
+  
+    const checkAuth = async () => {
+      try {
+        const token = await AsyncStorage.getItem('userToken');
+        setUserToken(token);
+      } catch (error) {
+        console.error('Error retrieving token:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    checkAuth();
   }, []);
 
+  if (loading) {
+    return <ActivityIndicator size="large" color="#0000ff" />;
+  }
+
   return (
-    <View>
-      <Text>User List:</Text>
-      {users.map((user, index) => (
-        <Text key={index}>{user[1]}</Text>
-      ))}
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        {userToken ? (
+          <Stack.Screen name="Home" component={HomeScreen} />
+        ) : (
+          <>
+            <Stack.Screen name="Login" component={LoginScreen} />
+            <Stack.Screen name="SignUp" component={SignUpScreen} />
+          </>
+        )}
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }

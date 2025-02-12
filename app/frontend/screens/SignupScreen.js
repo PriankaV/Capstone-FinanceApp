@@ -13,40 +13,39 @@ const SignUpScreen = () => {
   };
 
  
-const handleSignUp = async () => {
-  console.log("Signup button clicked!");  // Log button click
-  
-  if (!validatePassword(password)) {
-    Alert.alert('Error', 'Password must be at least 8 characters long and contain a special character.');
-    return;
-  }
-   if (password !== confirmPassword) {
-    Alert.alert('Error', 'Passwords do not match.');
-    return;
-  }
-
-  try {
-    console.log("Sending request to Flask API..."); // Log API request  
-    const response = await fetch('http://127.0.0.1:5000/api/signup', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password }),
-    });
-  
-    const result = await response.json();
-    console.log("API Response:", result); // Log the API response
-  
-    if (response.ok) {
-      Alert.alert('Success', 'Account created successfully!');
-      navigation.navigate('Login');
-    } else {
-      Alert.alert('Error', result.error || 'An error occurred. Please try again.');
+  const handleSignUp = async () => {
+    if (!email || !password || !confirmPassword) {
+      Alert.alert("Error", "All fields are required.");
+      return;
     }
-  } catch (error) {
-    console.error('Signup Error:', error);
-    Alert.alert('Error', 'Failed to connect to the server. Please try again later.');
-  }
-};
+  
+    if (password !== confirmPassword) {
+      Alert.alert("Error", "Passwords do not match.");
+      return;
+    }
+  
+    try {
+      const response = await fetch("http://127.0.0.1:5000/api/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+  
+      const result = await response.json();
+      console.log("Signup Response:", result);
+  
+      if (response.ok) {
+        Alert.alert("Success", "Account created successfully!");
+        navigation.navigate("Login"); // Redirect to Login
+      } else {
+        Alert.alert("Error", result.error || "Signup failed.");
+      }
+    } catch (error) {
+      console.error("Signup Error:", error);
+      Alert.alert("Error", "Could not connect to the server.");
+    }
+  };
+  
   
 
   return (

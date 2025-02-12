@@ -1,7 +1,9 @@
 from flask import Flask, jsonify
-from db_config import db, cursor  # Import MySQL connection
+from db_config import db, cursor
+from routes.auth_routes import auth_routes
 
 app = Flask(__name__)
+app.register_blueprint(auth_routes)
 
 @app.route('/api/users', methods=['GET'])
 def get_users():
